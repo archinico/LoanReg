@@ -24,7 +24,7 @@ namespace LoanReg.Pages
         }
         public void OnGet()
         {
-            Empleados = EmpleadosMethods.GetAllEmpleados();
+            Empleados = EmpleadosMethods.GetEmpleadoWRole();
         }
     }
 }

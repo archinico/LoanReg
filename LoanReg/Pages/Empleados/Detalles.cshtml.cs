@@ -7,7 +7,7 @@ using LoanReg.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace LoanReg
+namespace LoanReg.Pages.Empleados
 {
     public class DetallesModel : PageModel
     {

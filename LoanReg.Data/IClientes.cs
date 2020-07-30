@@ -16,6 +16,12 @@ namespace LoanReg.Data
         Cliente CreateCliente(Cliente createCliente);
         int GuardarCambios();
 
+        //public IList<Cliente> GetclientbySol(int id);
+
+        public IList<Cliente> GetClientSolId(int id);
+
+        IList<Cliente> GelAllClients();
+
 
     }
 }

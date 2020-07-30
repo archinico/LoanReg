@@ -34,6 +34,9 @@ namespace LoanReg
             services.AddRazorPages();
 
             services.AddScoped<IEmpleados, EmpleadosDBEF>();
+            services.AddScoped<IRoles, RolesDBEF>();
+            services.AddScoped<ISolicitudes, SolicitudesDBEF>();
+            services.AddScoped<IClientes, ClientesDBEF>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

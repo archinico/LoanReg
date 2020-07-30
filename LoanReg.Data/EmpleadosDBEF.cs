@@ -50,6 +50,11 @@ namespace LoanReg.Data
             throw new NotImplementedException();
         }
 
+        public IList<Empleado> GetEmpleadoWRole()
+        {
+            return db.Empleados.Include(t => t.Role).OrderBy(e => e.Id).ToList();
+        }
+
         public IList<Empleado> GetRoles(Empleado getRoles)
         {
             throw new NotImplementedException();
@@ -60,23 +65,21 @@ namespace LoanReg.Data
             return db.SaveChanges();
         }
 
-        public Empleado RolebyEmpRoleId(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public Empleado UpdateEmpleado(Empleado updateEmpleado)
         {
-            var studenSelected = db.Empleados.SingleOrDefault(e => e.Id == updateEmpleado.Id);
-            studenSelected.Nombre = updateEmpleado.Nombre;
-            studenSelected.Apellido = updateEmpleado.Apellido;
-            studenSelected.Telefono = updateEmpleado.Telefono;
-            studenSelected.Direccion = updateEmpleado.Direccion;
-            studenSelected.Correo = updateEmpleado.Correo;
-            studenSelected.Username = updateEmpleado.Username;
-            studenSelected.Password = updateEmpleado.Password;
+            var empleadoSelected = db.Empleados.SingleOrDefault(e => e.Id == updateEmpleado.Id);
+            empleadoSelected.Nombre = updateEmpleado.Nombre;
+            empleadoSelected.Apellido = updateEmpleado.Apellido;
+            empleadoSelected.Telefono = updateEmpleado.Telefono;
+            empleadoSelected.Direccion = updateEmpleado.Direccion;
+            empleadoSelected.Correo = updateEmpleado.Correo;
+            empleadoSelected.Username = updateEmpleado.Username;
+            empleadoSelected.Password = updateEmpleado.Password;
+            empleadoSelected.RoleId = updateEmpleado.RoleId;
 
-            return studenSelected;
+
+            return empleadoSelected;
         }
 
     }

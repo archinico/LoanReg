@@ -9,9 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Clientes\" />
-    <Folder Include="Pages\Roles\" />
-    <Folder Include="Pages\Solicitudes\" />
     <Folder Include="Pages\Prestamos\" />
   </ItemGroup>
 

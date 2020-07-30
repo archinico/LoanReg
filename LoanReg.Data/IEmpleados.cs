@@ -20,8 +20,6 @@ namespace LoanReg.Data
 
         Empleado Eliminar(int id);
 
-        IList<Empleado> GetRoles(Empleado getRoles);
-
-        Empleado RolebyEmpRoleId(int id);
+        IList<Empleado> GetEmpleadoWRole();
     }
 }

@@ -9,6 +9,14 @@ namespace LoanReg.Model
         public int Id { get; set; }
         public bool Estado { get; set; }
         public int ClienteId { get; set; }
+        public int MontoSolicitado { get; set; }
+        public DateTime FechaSolicitud { get; set; }
+        public int Interes { get; set; }
+        public int Cuotas { get; set; }
+
+        public TipoPago TipoPago { get; set; }
         public Cliente Cliente { get; set; }
+
+        //public List<Cliente> Clientes { get; set; }
     }
 }

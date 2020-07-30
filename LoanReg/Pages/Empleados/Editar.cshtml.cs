@@ -20,7 +20,8 @@ namespace LoanReg.Pages
         [BindProperty]
         public Empleado Empleados { get; set; }
 
-        public IList<Role> Roles { get; set; }
+        public SelectList Roles { get; set; }
+
 
 
         public EditarModel(IEmpleados empleadosMethods, IRoles rolesMethods, IHtmlHelper helper)
@@ -32,12 +33,15 @@ namespace LoanReg.Pages
 
         public void OnGet(int? Id)
         {
-            this.Roles = new List<Role>();
+            
 
             if (Id.HasValue)
             {
                 Empleados = empleadosMethods.GetEmpleadoById(Id.Value);
-                
+
+                //Roles = rolesMethods.GetAllRoles().Select(r => new SelectListItem { Value = r.Id.ToString(), Text = r.Nombre }).ToList();
+                Roles = new SelectList(rolesMethods.GetAllRoles(), "Id", "Nombre");
+ 
             }
             else 
             {
